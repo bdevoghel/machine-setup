@@ -1,0 +1,35 @@
+% kubectl login
+
+# Log into kubectl
+$ server: echo "server1.com server2.be" | tr ' ' '\n'
+$ username: echo "my@email.com " | tr ' ' '\n'
+$ cluster: echo "cluster1 cluster2" | tr ' ' '\n'
+kubectl-vsphere login --server=<server> --vsphere-username <username> --tanzu-kubernetes-cluster-name <cluster> --insecure-skip-tls-verify
+
+
+% registry login
+
+# Log into container registry with credentials
+$ registry: echo "my.registry.com  " | tr ' ' '\n'
+docker login <registry>
+
+
+% clean docker
+
+# Clean unused Docker data
+docker system prune --all
+
+
+% disk space
+
+# Inspect disk space usage
+df -h
+
+# Inspect file and directory sizes
+(du -sh * && du -sh .*) | sort -h
+
+
+% k9s
+
+# Run the K9S interactive tool
+k9s
